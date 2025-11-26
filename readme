@@ -1,1 +1,11 @@
-hello 
+Fixed-Point Math Modules in SystemVerilog (Q16.16 Format)
+This repository contains synthesizable SystemVerilog implementations of essential fixed-point arithmetic units commonly used in low-latency hardware systems, signal-processing pipelines, and financial-math accelerators.
+The core component is a 32-bit Q16.16 fixed-point adder/subtractor supporting:
+Signed two’s-complement Q16.16 format
+Addition and subtraction (a + b / a − b)
+Saturating arithmetic (clamps on overflow to ±max representable value)
+Configurable rounding modes (truncate, round-to-nearest, round-toward-zero)
+Optional one-cycle pipeline stage for higher fmax
+Deterministic latency and fully synthesizable datapath
+The design includes complete documentation, testbenches, and a reference model for correctness checking.
+This module serves as a reusable building block for more advanced fixed-point units such as MACs, normalization engines, reciprocal approximation units, financial indicators (EMA/VWAP), and hardware accelerators built on Q-format arithmetic.
